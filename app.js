@@ -20,10 +20,7 @@ const app = http.createServer(function (request, response) {
   }
 });
 const io = new Server(app);
-// io.emit('some event', { someProperty: 'some value', otherProperty: 'other value' }); // This will emit the event to all connected sockets
-
 io.on('connect', (socket) => {
-  //console.log();
   console.log('a user connected');
 
   socket.on('disconnect', () => {
